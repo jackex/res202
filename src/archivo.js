@@ -13,8 +13,17 @@ function readExcel(filePath) {
     
     dataExcel.forEach(element => {
 
-        const excelFirstName = new String(element['Primer nombre del usuario']);
-        Estructura.ValidateStructure.validateFirstName(excelFirstName);
+        //const excelFirstName = new String(element['Primer nombre del usuario']);
+        //Estructura.ValidateStructure.validateFirstName(excelFirstName);
+
+        //const excelMiddleName = new String(element['Segundo nombre del usuario']);
+        //Estructura.ValidateStructure.validateMiddleName(excelMiddleName);
+
+        //const excelFirstSurename = new String(element['Primer apellido del usuario']);
+        //Estructura.ValidateStructure.validateFirstSurename(excelFirstSurename);
+
+        const excelSecondSurename = new String(element['Segundo apellido del usuario']);
+        Estructura.ValidateStructure.validateSecondSurename(excelSecondSurename);
             
         //const excelDate = new String(element['Fecha de Nacimiento']);
         //Estructura.ValidateStructure.validateBirthDate(excelDate, currentYear, currentMonth, currentDay);            

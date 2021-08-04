@@ -15,15 +15,38 @@ module.exports.ValidateStructure.validateFirstName = function(excelFirstName){
             console.log(Errors.StructureErrors.nameErrors.invalidSymbol);
         }
     }else{
-        console.log(Errors.StructureErrors.nameErrors.emptyName);
+        console.log(Errors.StructureErrors.nameErrors.emptyFirstName);
     }
-    console.log("Str: "+ excelFirstName);
 };
 
-module.exports.ValidateStructure.validateSecondName = function(excelSecondName){
-    if(!regularExpresion.test(excelSecondName)){
-        if(excelSecondName.charAt(0) == ' ' || excelSecondName.charAt(excelSecondName.length -1) == ' '){
-            excelSecondName = excelSecondName.trim();
+module.exports.ValidateStructure.validateMiddleName = function(excelMiddleName){
+    if(!regularExpresion.test(excelMiddleName)){
+        if(excelMiddleName.charAt(0) == ' ' || excelMiddleName.charAt(excelMiddleName.length -1) == ' '){
+            excelMiddleName = excelMiddleName.trim();
+        }
+    }else{
+        console.log(Errors.StructureErrors.nameErrors.invalidSymbol);
+    }
+};
+
+module.exports.ValidateStructure.validateFirstSurename = function(excelSurename){
+    if(excelSurename.toString() !== 'undefined'){
+        if(!regularExpresion.test(excelSurename)){
+            if(excelSurename.charAt(0) == ' ' || excelSurename.charAt(excelSurename.length -1) == ' '){
+                excelSurename = excelSurename.trim();
+            }
+        }else{
+            console.log(Errors.StructureErrors.nameErrors.invalidSymbol);
+        }
+    }else{
+        console.log(Errors.StructureErrors.nameErrors.emptySurename);
+    }
+};
+
+module.exports.ValidateStructure.validateSecondSurename = function(excelSecondSurename){
+    if(!regularExpresion.test(excelSecondSurename)){
+        if(excelSecondSurename.charAt(0) == ' ' || excelSecondSurename.charAt(excelSecondSurename.length -1) == ' '){
+            excelSecondSurename = excelSecondSurename.trim();
         }
     }else{
         console.log(Errors.StructureErrors.nameErrors.invalidSymbol);
