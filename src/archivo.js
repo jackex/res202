@@ -13,6 +13,15 @@ function readExcel(filePath) {
     
     dataExcel.forEach(element => {
 
+        //const excelTipoRegistro = new String(element['Tipo de registro']);
+        //Estructura.ValidateStructure.validateRegisterType(excelTipoRegistro);
+
+        //const excelCodigoHabilitacion = new String(element['Código de habilitación IPS primaria']);
+        //Estructura.ValidateStructure.validateQualifiedCode(excelCodigoHabilitacion);
+
+        const excelTipoDocumento = new String(element['Tipo de identificación del usuario']);
+        Estructura.ValidateStructure.validateDocumentType(excelTipoDocumento);
+
         //const excelFirstName = new String(element['Primer nombre del usuario']);
         //Estructura.ValidateStructure.validateFirstName(excelFirstName);
 
@@ -22,8 +31,8 @@ function readExcel(filePath) {
         //const excelFirstSurename = new String(element['Primer apellido del usuario']);
         //Estructura.ValidateStructure.validateFirstSurename(excelFirstSurename);
 
-        const excelSecondSurename = new String(element['Segundo apellido del usuario']);
-        Estructura.ValidateStructure.validateSecondSurename(excelSecondSurename);
+        //const excelSecondSurename = new String(element['Segundo apellido del usuario']);
+        //Estructura.ValidateStructure.validateSecondSurename(excelSecondSurename);
             
         //const excelDate = new String(element['Fecha de Nacimiento']);
         //Estructura.ValidateStructure.validateBirthDate(excelDate, currentYear, currentMonth, currentDay);            
