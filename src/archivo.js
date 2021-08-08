@@ -19,8 +19,11 @@ function readExcel(filePath) {
         //const excelCodigoHabilitacion = new String(element['Código de habilitación IPS primaria']);
         //Estructura.ValidateStructure.validateQualifiedCode(excelCodigoHabilitacion);
 
-        const excelTipoDocumento = new String(element['Tipo de identificación del usuario']);
-        Estructura.ValidateStructure.validateDocumentType(excelTipoDocumento);
+        //const excelTipoDocumento = new String(element['Tipo de identificación del usuario']);
+        //Estructura.ValidateStructure.validateDocumentType(excelTipoDocumento);
+
+        //const excelNumeroDocumento = new String(element['Numero de Identificacion']);
+        //Estructura.ValidateStructure.validateDocumentNumber(excelNumeroDocumento);
 
         //const excelFirstName = new String(element['Primer nombre del usuario']);
         //Estructura.ValidateStructure.validateFirstName(excelFirstName);
@@ -35,7 +38,19 @@ function readExcel(filePath) {
         //Estructura.ValidateStructure.validateSecondSurename(excelSecondSurename);
             
         //const excelDate = new String(element['Fecha de Nacimiento']);
-        //Estructura.ValidateStructure.validateBirthDate(excelDate, currentYear, currentMonth, currentDay);            
+        //Estructura.ValidateStructure.validateBirthDate(excelDate, currentYear, currentMonth, currentDay);   
+        
+        //const excelSexo = new String(element['SEXO']);
+        //Estructura.ValidateStructure.validateSex(excelSexo);
+
+        //const excelCodigoPertenenciaEtnica = new String(element['Código pertenencia étnica']);
+        //Estructura.ValidateStructure.validateEthnicityCode(excelCodigoPertenenciaEtnica);
+
+        //const excelCodigoOcupacion = new String(element['Código de ocupación']);
+        //Estructura.ValidateStructure.validateOccupationCode(excelCodigoOcupacion);
+
+        const excelCodigoNivelEducativo = new String(element['Código de nivel educativo']);
+        Estructura.ValidateStructure.validateEducationLevel(excelCodigoNivelEducativo);
     });
 }
 

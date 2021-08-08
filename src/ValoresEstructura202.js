@@ -10,25 +10,38 @@ module.exports.ValoresEstructura202.codigoHabilitacion = {
 };
 
 module.exports.ValoresEstructura202.tipoIDentificacionUsuario = {
-    value: ['RC','TI','CE','CC','PA','MS','AS','NV'],
+    value: /\RC|\TI|\CE|\CC|\PA|\MS|\AS|\NV/,
     length: 2
 };
 
+module.exports.ValoresEstructura202.numeroIdentificacion = {
+    length: 16
+};
+
 module.exports.ValoresEstructura202.sexoUsuario = {
-    value: ['M','F'],
+    value: /\M|\F/,
     length: 1
 };
 
 module.exports.ValoresEstructura202.codigoPertenenciaEtnica = {
-    value: [1, 2, 3, 4, 5, 6]
+    value: /^1{1}$|^2{1}$|^3{1}$|^4{1}$|^5{1}$|^6{1}$/,
+    length: 1
+
 };
 
 module.exports.ValoresEstructura202.codigoOcupacion = {
-    value: 4
+    length: {
+        min: 1,
+        max: 4
+    }
 };
 
 module.exports.ValoresEstructura202.codigoNivelEducativo = {
-    value: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    value: /^1{1}$|^2{1}$|^3{1}|^4{1}|^5{1}$|^6{1}$|^7{1}|^8{1}|^9{1}|^10{1}|^11{1}|^12{1}|^13{1}/,
+    length: {
+        min: 1,
+        max: 2
+    }
 };
 
 module.exports.ValoresEstructura202.sifilisGestacional = {
